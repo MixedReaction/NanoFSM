@@ -23,5 +23,5 @@ for a state to transition to then that state should return a null value. The sta
 manager will then be responsible for deciding if the state machine should shutdown, restart,
 or transition to a fallback/error state.
 
-With some ingenuity, this can also be used for recursive purposes which will never flood the
-call stack.
+Additionally, with some ingenuity, this can also be used for deep recursive purposes which will
+never flood the call stack.
