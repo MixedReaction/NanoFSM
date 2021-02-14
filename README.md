@@ -1,5 +1,5 @@
 # NanoFSM
-A highly compact and light-weight general use finite state machine.
+A highly compact and light-weight general purpose finite state machine.
 
 ## Two Flavors
 NanoFSM comes in two flavors. <i>Basic</i> and <i>Minimal</i>. The basic implementation
