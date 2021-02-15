@@ -26,5 +26,5 @@ The state machine manager will then be responsible for deciding if the state mac
 shutdown, restart, or transition to a fallback/error state.
 
 Adhering to these principles will ensure high scalability and maintainability across all of
-your models. Additionally, with some ingenuity, this ppattern can also be used for deep
+your models. Additionally, with some ingenuity, this pattern can also be used for deep
 recursion and will never flood the call stack.
