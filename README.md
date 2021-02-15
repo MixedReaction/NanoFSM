@@ -1,16 +1,17 @@
 # NanoFSM
-A highly compact and light-weight general purpose finite state machine.
+A highly compact and light-weight general purpose finite state machine pattern.
 
 ## Two Flavors
-NanoFSM comes in two flavors. <i>Basic</i> and <i>Minimal</i>. The basic implementation
-offers both safety and performance while the minimal implementation reduces LoC at the
-expense of both safety and performance. However, both implementations follow the same
-set of rules:
+Two example implementations of the pattern have been included. <i>Basic</i> and <i>Minimal</i>.
+The basic implementation offers both safety and performance while the minimal implementation
+reduces LoC at the expense of both safety and performance. The pattern is comprised of three
+principles, and it is important that you follow them when creating your own implementations.
+The principles of this pattern are:
 
 #### 1. States are responsible for deciding the next transition.
 The state machine manager should never be responsible for deciding which state it should
 trasition to. This removes the need for switches and enumerations. The only added exception
-is mentioned in rule #3.
+is mentioned in principle #3.
 
 #### 2. State machine manager is responsible for making transitions.
 States themselves shoud never be allowed to make transitions directly. Instead, states are
@@ -24,6 +25,6 @@ for a state to transition to then that state should return a null value. The sta
 manager will then be responsible for deciding if the state machine should shutdown, restart,
 or transition to a fallback/error state.
 
-Adhering to these rules will ensure high scalability and maintainability across all of your
-models. Additionally, with some ingenuity, this can also be used for deep recursion and will
-never flood the call stack.
+Adhering to these principles will ensure high scalability and maintainability across all of
+your models. Additionally, with some ingenuity, this ppattern can also be used for deep
+recursion and will never flood the call stack.
