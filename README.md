@@ -14,7 +14,7 @@ trasition to. This removes the need for switches and enumerations. The only adde
 is mentioned in principle #3.
 
 #### 2. State machine manager is responsible for making transitions.
-States themselves shoud never be allowed to make transitions directly. Instead, states are
+States themselves should never be allowed to make transitions directly. Instead, states are
 to request which states they would like the state machine manager to transition to. This
 ensures that control is always tranferred back to the state machine manager, thus for,
 relieving pressure on the call stack.
