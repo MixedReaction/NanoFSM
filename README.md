@@ -4,9 +4,18 @@ A highly compact and light-weight general purpose finite state machine pattern.
 ## Two Flavors
 Two example implementations of the pattern have been included. <i>Basic</i> and <i>Minimal</i>.
 The basic implementation offers both safety and performance while the minimal implementation
-reduces LoC at the expense of both safety and performance. The pattern is comprised of three
-principles, and it is important that you follow them when creating your own implementations.
-The principles of this pattern are:
+reduces LoC at the expense of both safety and performance.
+
+## Design
+Simplicity is key. The state machine is comprised of two components. A state machine manager and
+the states. The state machine manager can be thought of as a scheduler, it recieves requests
+made by the states and processes said request. The requests made by the states are transitions,
+which can either be to the same state (effectively restarting it), or to a new state. States never
+interact with each other directly, and it is the job of the state machine manager to enfore this.
+
+## Three Principles
+The pattern consists of three principles, and it is important that you follow them when
+implementing this pattern.
 
 #### 1. States are responsible for deciding the next transition.
 The state machine manager should never be responsible for deciding which state it should
