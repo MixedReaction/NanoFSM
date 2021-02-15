@@ -1,6 +1,6 @@
 using System;
 
-namespace NanoFSM
+namespace DiscreteStatePattern
 {
     class Program
     {
