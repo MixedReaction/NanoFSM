@@ -23,5 +23,6 @@ for a state to transition to then that state should return a null value. The sta
 manager will then be responsible for deciding if the state machine should shutdown, restart,
 or transition to a fallback/error state.
 
-Additionally, with some ingenuity, this can also be used for deep recursive purposes which will
+Adhering to these rules will ensure high scalability and maintainability across all of your
+models. Additionally, with some ingenuity, this can also be used for deep recursion and will
 never flood the call stack.
