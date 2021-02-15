@@ -10,13 +10,13 @@ The principles of this pattern are:
 
 #### 1. States are responsible for deciding the next transition.
 The state machine manager should never be responsible for deciding which state it should
-trasition to. This removes the need for switches and enumerations. The only added exception
+transition to. This removes the need for switches and enumerations. The only added exception
 is mentioned in principle #3.
 
 #### 2. State machine manager is responsible for making transitions.
 States themselves should never be allowed to make transitions directly. Instead, states are
 to request which states they would like the state machine manager to transition to by returning
-a pointer to said state. This ensures that control is always tranferred back to the state machine
+a pointer to said state. This ensures that control is always transferred back to the state machine
 manager, thus for, relieving pressure on the call stack.
 
 #### 3. State machine manager is responsible for state machine shutdown.
