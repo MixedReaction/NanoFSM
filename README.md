@@ -37,8 +37,9 @@ shutdown, restart, or transition to a fallback/error state.
 #### 4. Discreteness
 The internals of the state machine manager should never be exposed nor should the state machine
 manager store states outside of its scope. The state machine manager should operate as a sealed
-unit. A state machine manager however may rely on global data to determine a valid fallback/error
-state or if the state machine should be shutdown.
+unit. However, state machine manager may utilize global data to determine a valid fallback/error
+state or if the state machine should be shutdown. States are also free to utilize global data as
+well.
 
 Adhering to these principles will ensure high scalability and maintainability across all of
 your models. Additionally, with some ingenuity, this pattern can also be used for deep
