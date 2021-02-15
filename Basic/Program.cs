@@ -27,7 +27,6 @@ namespace NanoFSM
 
         static State PlayState()
         {
-
             for (int i = 0; i < int.MaxValue; i++)
             {
                 Console.Clear();
