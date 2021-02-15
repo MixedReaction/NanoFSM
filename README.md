@@ -13,8 +13,8 @@ made by the states and processes said request. The requests made by the states a
 which can either be to the same state (effectively restarting it), or to a new state. States never
 interact with each other directly, and it is the job of the state machine manager to enfore this.
 
-## Three Principles
-The pattern consists of three principles, and it is important that you follow them when
+## Four Principles
+The pattern consists of four principles, and it is important that you follow them when
 implementing this pattern.
 
 #### 1. States are responsible for deciding the next transition.
@@ -33,6 +33,12 @@ States themselves should never be allowed to shutdown the state machine. If ther
 for a state to transition to then that state should relay that to the state machine manager.
 The state machine manager will then be responsible for deciding if the state machine should
 shutdown, restart, or transition to a fallback/error state.
+
+#### 4. Discreteness
+The internals of the state machine manager should never be exposed nor should the state machine
+manager store states outside of its scope. The state machine manager should operate as a sealed
+unit. A state machine manager however may rely on global data to determine a valid fallback/error
+state or if the state machine should be shutdown.
 
 Adhering to these principles will ensure high scalability and maintainability across all of
 your models. Additionally, with some ingenuity, this pattern can also be used for deep
