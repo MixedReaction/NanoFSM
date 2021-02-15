@@ -1,4 +1,4 @@
-# NanoFSM
+# Discrete State Pattern
 A pattern for creating highly compact and light-weight general purpose finite state machines.
 
 ## Two Flavors
