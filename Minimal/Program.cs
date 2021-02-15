@@ -25,7 +25,6 @@ namespace NanoFSM
 
         static Func<dynamic> PlayState()
         {
-
             for (int i = 0; i < int.MaxValue; i++)
             {
                 Console.Clear();
