@@ -9,7 +9,7 @@ reduces LoC at the expense of both safety and performance.
 ## Design
 Simplicity is key. The state machine is comprised of two components. A state machine manager and
 the states. The state machine manager can be thought of as a scheduler, it recieves requests
-made by the states and processes said request. The requests made by the states are transitions,
+made by the states and processes said requests. The requests made by the states are transitions,
 which can either be to the same state (effectively restarting it), or to a new state. States never
 interact with each other directly, and it is the job of the state machine manager to enfore this
 seperation.
