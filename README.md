@@ -1,5 +1,5 @@
 # NanoFSM
-A pattern for creating compact and light-weight general purpose finite state machines.
+A pattern for creating highly compact and light-weight general purpose finite state machines.
 
 ## Two Flavors
 Two example implementations of the pattern have been included. <i>Basic</i> and <i>Minimal</i>.
