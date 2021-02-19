@@ -4,7 +4,8 @@ A pattern for creating highly compact and light-weight general purpose finite st
 ## Two Flavors
 Two example implementations of the pattern have been included. <i>Basic</i> and <i>Minimal</i>.
 The basic implementation offers both safety and performance while the minimal implementation
-reduces LoC at the expense of both safety and performance.
+reduces LoC at the expense of both safety and performance. Please do not use the minimal
+implementation in a production environment, it is meant to be a clever example.
 
 ## Design
 Simplicity is key. The state machine is comprised of two components. A state machine manager and
